@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive T-Shirt Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">T-Shirt Shop</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Section -->
+    <div class="container">
+
+        <!-- Products Section -->
+        <section id="products">
+            <h2>Our T-Shirts</h2>
+            <div class="product-list">
+                <div class="product-item">
+                    <img src="images/tshirt1.jpg" alt="Classic White T-Shirt">
+                    <h3>Classic White T-Shirt</h3>
+                    <p>$20</p>
+                    <button onclick="addToCart('Classic White T-Shirt', 20)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/tshirt2.jpg" alt="Black V-Neck T-Shirt">
+                    <h3>Black V-Neck T-Shirt</h3>
+                    <p>$25</p>
+                    <button onclick="addToCart('Black V-Neck T-Shirt', 25)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/tshirt3.jpg" alt="Grey Round Neck T-Shirt">
+                    <h3>Grey Round Neck T-Shirt</h3>
+                    <p>$22</p>
+                    <button onclick="addToCart('Grey Round Neck T-Shirt', 22)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart Section -->
+        <section id="cart">
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <p>Total: $<span id="total-price">0</span></p>
+            <button id="checkout-button">Checkout</button>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
